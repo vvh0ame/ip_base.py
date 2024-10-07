@@ -1,10 +1,14 @@
-# ip_base.py
+# ip_base.js
 Web-API for [ipbase.com](https://ipbase.com) website that provides a reliable &amp; scalable IP geolocation API for software developers
 
 ## Example
-```python
-import ip_base
-ip_base = ip_base.IPBase(api_key="")
-status = ip_base.get_status()
-print(status)
+```JavaScript
+async function main() {
+	const { IpBase } = require("./ip_base.js")
+	const ipBase = new IpBase()
+	const status = await ipBase.getStatus()
+	console.log(status)
+}
+
+main()
 ```
